@@ -1,0 +1,227 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="941,3940" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Web Main" sap:VirtualizedContainerService.HintSize="951,3875" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="customersData" />
+      <Variable x:TypeArguments="x:Int32" Name="rowNumber">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Private: Excel Process Scope" sap:VirtualizedContainerService.HintSize="909,265" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadRange AddHeaders="True" DataTable="[customersData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="customers.xlsx">
+              <ui:ReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ReadRange.Range>
+            </ui:ReadRange>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="909,3478" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="cd4584b6-c971-409a-af3e-77c9a0b21227" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <ui:InterruptibleWhile Condition="[rowNumber &lt; customersData.Rows.Count]" DisplayName="While" sap:VirtualizedContainerService.HintSize="875,3262" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+            <ui:InterruptibleWhile.Body>
+              <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="839,3097" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;first name&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="108, 214, 233, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='input' aaname='' /&gt;" Guid="ecf1fdff-eb26-415f-bd73-251a8678a397" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO0AAAAmCAYAAAAoYhz4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADfSURBVHhe7d0xCoNAGITR3P9OgqcQz2KzYSARA7F2B96Dadz6w/J/DaCKaKHMT7T7vo91XceyLGY2wdJjurw6o83Dtm3jOI7PF+Bp6TFdXsM9o03RgoX5pMv0+XVGm18xMKdrn6KFAqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMn+jdYAL5nR7gMupS5hPerw9dRl5SNH5FZvZ80uP12DjJ1pgfqKFKmO8AZwznPcyD+3mAAAAAElFTkSuQmCC" InformativeScreenshot="96733fbdc976688b8088bf8be6806f30.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;last name&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="108, 256, 233, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tabindex='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tabindex='3' tag='INPUT' type='input' aaname='' /&gt;" Guid="7e78f257-64a2-4070-a650-f2e6b1389c29" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO0AAAAmCAYAAAAoYhz4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADfSURBVHhe7d0xCoNAGITR3P9OgqcQz2KzYSARA7F2B96Dadz6w/J/DaCKaKHMT7T7vo91XceyLGY2wdJjurw6o83Dtm3jOI7PF+Bp6TFdXsM9o03RgoX5pMv0+XVGm18xMKdrn6KFAqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMqKFMn+jdYAL5nR7gMupS5hPerw9dRl5SNH5FZvZ80uP12DjJ1pgfqKFKmO8AZwznPcyD+3mAAAAAElFTkSuQmCC" InformativeScreenshot="0b98859810719edaa1e1481fb37c54ef.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <If Condition="[customersData(rowNumber)(&quot;gender&quot;).tostring=&quot;Female&quot;]" sap:VirtualizedContainerService.HintSize="797,405" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="230, 352, 54, 14" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Female' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Female' tag='LABEL' type='' check:text='unchecked' /&gt;" Guid="b466b7aa-d79c-4da2-b5f2-8d7e5db04c43" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAASCAYAAAAKRM1zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEaSURBVFhH7ZSNDYQgDIVvJ+aSVYib4CSGMUzYoWeBwxbr+YOXS9SXkFhpaj949QU30QN6NT2gWb0BpdR8NRZ8Svm9PNhGgelTeEAbQQ24FP5HD+hmnQDqwBBL624ytGsxdqHJye40X4MdUvIo3+lch+/NQXnu+kVUgsamJzjeEILShss4NPuZ9cGCpnOP380xrxshSU8sV9bBn1FqVvoAvmtjCwEsPaMYGCrUXjhEBM97FFSyMb7j7ihVdaPcPmQlmN2gAY7WkkD5qNDF4bnqrIt7XyyzC1SElkClG13XKTNa2sjTmdwIGvbKXBFUqDPKD0vHHVUJiiqtpMOfNuzssi6vozs7xjIoKh4EyW9M5YxeRA/o1XQTUIA39hsl9FV6UQYAAAAASUVORK5CYII=" InformativeScreenshot="16f19ae50e2850a2da51875a3d04a60a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="156, 352, 54, 14" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Male' check:text='unchecked' /&gt;" Guid="c7d22231-3736-4bbb-960b-6b6076ee1b81" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAASCAYAAAAKRM1zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFRSURBVFhH7ZZNDoMgEIV7J89VrkK8Cd7DhLh051KjG9eaTIc/yyg2ojZptC8xMop0Pt4AfcBN9Ae9mm4B2rbtFtAOxDOB5CmwtaYCeIJ90sLGn2TG49KGX9Y4jiCljABFkLXkuozp978IWtc1VFW1HZSnHGE4ejeXcpPhe4T9QdCyLKHv+whQae4sowVcpMZJ7aoPKtXEmEqg1RAAbQSwYN/jUmU7DEMMKDZ1QgxEY974MQVVLnvu634unoFayDecqZDpNw4qz3N9jwNFOQdd2zm8cJTIT56OF/pOPZtXzl7tc1TJuZjRNbtM2O7E0xUG1RNH+tlrddLitGON2hCloTAZf9YJ6LzEIx09U/G7rgeqn6X0XCUJq43IP3f1xhQGXU4KqunI2EcUfY5S0KWoM+abdxkKjFdAleyGNPXHvvykNaq08Z/RNfQHvZpuAgrwAgP/bqsXio9GAAAAAElFTkSuQmCC" InformativeScreenshot="7411e97582392f71407f4366852e5f88.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;address&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="491, 214, 199, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tabindex='5' tag='INPUT' type='input' /&gt;" FuzzySelectorArgument="&lt;webctrl tabindex='5' tag='INPUT' type='input' aaname='' /&gt;" Guid="6b6c8be5-ac6a-4a6c-85fe-b94c11f4b651" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMsAAAAmCAYAAABqIW9vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADVSURBVHhe7d09CoNAAITR3P9OgqcQz2KzYSDxB2KY3vdgGrf+2M59DaAiFihdYlnXdczzPKZpMnv00kF6ONtjycGyLGPbts8XeK50kB7OweyxpCShwCE9pIuvPZZcPcDVuQuxwB9igZJYoCQWKIkFSmKBkligJBYoiQVKYoGSWKAkFiiJBUpigZJYoCQWKIkFSmKBkligJBYoiQVKYoGSWKAkFiiJBUpigZJYoPQzFj8Gh6vbH4N7cgIO6eD2yYnIQUrK1WP25KWDcyhxiQW4JxaojPEG2+O0kxDgtXYAAAAASUVORK5CYII=" InformativeScreenshot="87a12e8881a7f26b040c906ac2dd005f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;city&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="491, 256, 199, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tabindex='6' tag='INPUT' type='input' /&gt;" FuzzySelectorArgument="&lt;webctrl tabindex='6' tag='INPUT' type='input' aaname='' /&gt;" Guid="e1efd9be-8d71-4a0a-8855-c504f7b33b27" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMsAAAAmCAYAAABqIW9vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADVSURBVHhe7d09CoNAAITR3P9OgqcQz2KzYSDxB2KY3vdgGrf+2M59DaAiFihdYlnXdczzPKZpMnv00kF6ONtjycGyLGPbts8XeK50kB7OweyxpCShwCE9pIuvPZZcPcDVuQuxwB9igZJYoCQWKIkFSmKBkligJBYoiQVKYoGSWKAkFiiJBUpigZJYoCQWKIkFSmKBkligJBYoiQVKYoGSWKAkFiiJBUpigZJYoPQzFj8Gh6vbH4N7cgIO6eD2yYnIQUrK1WP25KWDcyhxiQW4JxaojPEG2+O0kxDgtXYAAAAASUVORK5CYII=" InformativeScreenshot="3238554ea0fb0ee8f8251ca29bd2c234.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Choose an option...'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;state&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="491, 298, 199, 34" ElementType="DropDown" FriendlyName="'Choose an option...'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="12e39702-831e-4960-bf71-52a914ecd3a9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMsAAAAmCAYAAABqIW9vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANXSURBVHhe7Z1JbuMwEEX73L5AVoEWPoN9Am8MeLiEcwnvAy/Z/BRLqqIoseTA6Eb8H0C0xEkc6olKL5I/gRDigrIQ4sTIcjwew+fnZ/j4+GBieusED+CDZpAFBYfDIXx/f+ccQt4XeAAftDCDLDCJohAyAh/ghTDIgqOHEGLRXlAWQhagLIQ4oSyEOKEshDihLIQ4oSyEOKEshDihLIQ4oSyEOHlKltt+EzYbnbpwvefC+zV0+p5Uue134Zavwf3S2XUk/x3rZEkiRDn2epsjX7u40XnzKYuDW9jJemV6WWweeR2n0yk8Ho98N4K88/mc7ywrZLmHa1cRpYSytElrRDH+FRAFX0Tb7dYIg2vkoQx1SvyyeCWQehecNvKZVnuLStkm7L5yQcZ+5tln2jLdL97WY1l3mRuoraflR9/d5da/FFr9pHnW+0nzi/dmnlKeTmHVTuaA/O4aX0lCMU5dJrKZviifFy2FCFPLK/HLoj+1lpAgGoLHnkiTz41cX4RJMujASM/NwkzGcIsB0/+LwBoDu39mKSFA/2O+rdeLqOTUz9YUY5Z+7Bz1ePrxDfUl2PNtAs8a5l3OJ49NyhtrTNqUcrREAS+SxQZYCp600fUgToGQNhpBUgZn3yYFzlzwmkDLIM8RPHi2BOU4DqEI8oycHAa1PuN8R0zfLVlq89HrurjGxIsWpiUK8MtS2aAqixu5EHwon3nGNND6yUleai95Os0ET+pP1Vsry7ReRI29FrgmL9Wdl6XW3oxlcY3JGkSYlijAL0vcBtdRv7iRPzxZDMWJ4wqUaV94Nk+W9waStEQBK2SJpE2aCmM2qrGR6VoHSu5TAjIFld70FIQSJPFnlKFAi1cL6qimGkNPKWPfbq0s5ZhlLNK2Ncf+fkGWYlzArEtjjfU85q7JetbJksiBETdzSNikGJmejRzuVfsyGNOmDuVjX/cYUMMnGFIlsHU7/M9WiX32Llzj/WpZQBZg6Eu16+cb+1Xltg+9hnl+k9OkmI8uW1zj3PfiNXmGJ2QhLcqXA/kdUJYXQFl+J5SFECeUhRAnlIUQJ5SFECeUhRAnlIUQJ1VZ+IvBCbHM/mJw/skJQkbgweyfnAAogEk4epiY3jnBAy0KMLIQQuahLIS4COEvYJygddvsGAUAAAAASUVORK5CYII=" InformativeScreenshot="75e3f52aff242f9e7577941c8ec832f7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;home phone&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="822, 217, 199, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tabindex='8' tag='INPUT' type='input' /&gt;" FuzzySelectorArgument="&lt;webctrl tabindex='8' tag='INPUT' type='input' aaname='' /&gt;" Guid="f1e25243-ce7a-471a-93c3-1a7792475398" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMsAAAAmCAYAAABqIW9vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADVSURBVHhe7d09CoNAAITR3P9OgqcQz2KzYSDxB2KY3vdgGrf+2M59DaAiFihdYlnXdczzPKZpMnv00kF6ONtjycGyLGPbts8XeK50kB7OweyxpCShwCE9pIuvPZZcPcDVuQuxwB9igZJYoCQWKIkFSmKBkligJBYoiQVKYoGSWKAkFiiJBUpigZJYoCQWKIkFSmKBkligJBYoiQVKYoGSWKAkFiiJBUpigZJYoPQzFj8Gh6vbH4N7cgIO6eD2yYnIQUrK1WP25KWDcyhxiQW4JxaojPEG2+O0kxDgtXYAAAAASUVORK5CYII=" InformativeScreenshot="cdc366b5305f42ab52fc61586ad87048.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;work phone&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="822, 259, 199, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tabindex='9' tag='INPUT' type='input' /&gt;" FuzzySelectorArgument="&lt;webctrl tabindex='9' tag='INPUT' type='input' aaname='' /&gt;" Guid="8c5138ff-f416-4870-b48a-94e695e6123d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMsAAAAmCAYAAABqIW9vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADVSURBVHhe7d09CoNAAITR3P9OgqcQz2KzYSDxB2KY3vdgGrf+2M59DaAiFihdYlnXdczzPKZpMnv00kF6ONtjycGyLGPbts8XeK50kB7OweyxpCShwCE9pIuvPZZcPcDVuQuxwB9igZJYoCQWKIkFSmKBkligJBYoiQVKYoGSWKAkFiiJBUpigZJYoCQWKIkFSmKBkligJBYoiQVKYoGSWKAkFiiJBUpigZJYoPQzFj8Gh6vbH4N7cgIO6eD2yYnIQUrK1WP25KWDcyhxiQW4JxaojPEG2+O0kxDgtXYAAAAASUVORK5CYII=" InformativeScreenshot="36b274f803bacdb44e54477b980946be.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;personal email&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="1162, 216, 142, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='' /&gt;" Guid="b708dfa7-620f-4682-a7af-f30fc73dd530" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAAAmCAYAAAAvIMLtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVHhe7dwxCoNQFETR7H9PgqsQ12Lzw0AiBiKoTHkOTONvL5bvNaBASFT8hLSu65jneUzTZHa6NJJWjvaQ8rAsy9i27fMF/ksjaeUY0x5SKhMRV6WVNPO1h5RfFtxxbEZIPCYkKoREhZCoEBIVQqJCSFQIiQohUSEkKoREhZCoEBIVQqJCSFQIiQohUSEkKoREhZCoEBIVQqJCSFQIiQohUSEkKoRExd+QHJHgjtMjEs7acFUaOT1rE3lIZfllmZ0tjRwjip+Q4CkhUTDGGxg1VKgAHFCAAAAAAElFTkSuQmCC" InformativeScreenshot="e7daf442a15a5f0270b581d2ed43ddee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="797,216" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Text="[customersData(rowNumber)(&quot;work email&quot;).tostring]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="1162, 258, 142, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tabindex='11' tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tabindex='11' tag='INPUT' type='email' aaname='' /&gt;" Guid="686c0fa7-18a1-4818-bc79-99b566619b14" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAAAmCAYAAAAvIMLtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVHhe7dwxCoNQFETR7H9PgqsQ12Lzw0AiBiKoTHkOTONvL5bvNaBASFT8hLSu65jneUzTZHa6NJJWjvaQ8rAsy9i27fMF/ksjaeUY0x5SKhMRV6WVNPO1h5RfFtxxbEZIPCYkKoREhZCoEBIVQqJCSFQIiQohUSEkKoREhZCoEBIVQqJCSFQIiQohUSEkKoREhZCoEBIVQqJCSFQIiQohUSEkKoRExd+QHJHgjtMjEs7acFUaOT1rE3lIZfllmZ0tjRwjip+Q4CkhUTDGGxg1VKgAHFCAAAAAAElFTkSuQmCC" InformativeScreenshot="92934725d138cee1daa5e56bef9ca090.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NClick ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="797,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cd4584b6-c971-409a-af3e-77c9a0b21227" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://rpacrm.bubbleapps.io/" DesignTimeRectangle="31, 382, 142, 62" ElementType="Button" FriendlyName="'Add'" FullSelectorArgument="&lt;webctrl aaname='Add' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add' tag='BUTTON' type='' check:text='Add' /&gt;" Guid="56970fb2-f34f-44cf-8606-ea411f7290cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAABCCAYAAAC8RY+hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI+SURBVHhe7d2xbcJAFIdxugyUJkWmyQA0bIGUDZCYgQGYIH3ajIAUiQKhyLlnfI59ficO8k8R33fSTwrwoLlPZ5OGxfF4bIDfIiRITELa7k7N88tX8/DUNItH4Ic1YW1YI2k3o5CW67P7AUDKWhm204dklXlvAHKGJ1Mfkh1Z3jCQY81MQuKeCLeyZiYheYPANYQECUKCBCFBgpAgQUiQICRIEBIkCAkShAQJQoIEIUGCkCBBSJAgJEgQEiQICRKEBAlCggQhQaL6kN6by9q/+q/nbD4u79s4rw2Vzv13dYe0u2xyu8KGuzMZhDRWdUjtJn+G0+iOzSaksXpDCpeyQ9jgw9vP3+/hhHJnHYQ0Vm1IqxCQrXhvtA8nk51Oq2QuivdS7Qpx5AIpnZubakNqNzxscnychtXrTitbMYY4a6sPpHRupuoMqbvJTi9laVwmd6Kkz5fOzVWVIbWb61zGvE334jLpbOncXNUX0uASlFvDk4qQylQXUvZeqJPedBNSmepCuvbtzP02F1YaQhpI6dxc1RVS5iZ7pLv0tf9fssfde4bxxWhs9YGUzs1UVSHlTo1UnOsvfzGSbrUhds+NPqt0boaqCgl/h5AgQUiQICRIEBIkCAkShAQJQoIEIUGCkCBBSJAgJEgQEiQICRKEBAlCggQhQYKQIEFIkJiExI8j41bujyPzc+24lftz7dvdyR0GcqyZSUhmuT67bwBS1sqwnVFIxiqzI4t7JqSsCWtjeBJFk5CAexASBI7NN4sTMVoWc/euAAAAAElFTkSuQmCC" InformativeScreenshot="bef9d7f0131a56309e5167522006972d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bubble Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[rowNumber]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[rowNumber+1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ui:InterruptibleWhile.Body>
+          </ui:InterruptibleWhile>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="a5a8c8f4155ba6dcd8cfaca8223925f3.png" Selector="&lt;html app='chrome.exe' url='https://rpacrm.bubbleapps.io' /&gt;" Url="https://rpacrm.bubbleapps.io" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
